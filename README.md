@@ -29,9 +29,65 @@ The OpenFrame harness is ideal for those looking to implement custom SoCs or int
 2. User area of approximately 15mm².
 3. Supports digital, analog, or mixed-signal designs.
 
-# openframe_timer_example
 
-This example implements a simple timer and connects it to the GPIOs.
+# Microwatt Smart Peripherals SoC
+
+## Project Proposal and Description
+
+This project presents a **minimal System-on-Chip (SoC) based on the open-source Microwatt CPU core**, enhanced with smart peripherals including **UART, GPIO, and SPI/I²C**. The design demonstrates real-world embedded applications such as:
+
+- Controlling LEDs via GPIO  
+- Reading data from a temperature sensor via I²C  
+- Communicating system status over UART  
+
+The objective is to showcase that **Microwatt can serve as the central processor of a microcontroller-like system**, providing a fully functional, reproducible, and educational platform for open-source hardware development.
+
+---
+
+## Significance and Impact
+
+- **Complete SoC Implementation:** Integrates CPU and peripheral subsystems to deliver a fully operational design.  
+- **Reproducibility and Accessibility:** Facilitates replication and experimentation by judges and the community.  
+- **Educational Value:** Serves as a reference platform for developers and learners exploring Microwatt and embedded SoC design.
+
+---
+
+## Distinguishing Features
+
+- **Smart Peripheral Extensions:**  
+  - PWM output for LED dimming or motor control  
+  - ADC interface to connect analog sensors  
+
+- **Configurable Memory-Mapped Bus:**  
+  - Implemented using **Wishbone or AXI-lite interconnect** for modularity  
+  - Enhances reusability and scalability of the design  
+
+- **Demonstration Application – “Microwatt Smart Node”:**  
+  - Reads sensor data via I²C  
+  - Transmits sensor information over UART  
+  - Dynamically adjusts LED blink rate based on temperature readings  
+
+- **Optional Debug Module:**  
+  - Provides JTAG/UART-based memory and register access  
+  - Enables debugging and instructional demonstrations  
+
+> This SoC extends beyond a simple Microwatt implementation, representing a **smart edge computing device** with complete hardware-software integration suitable for prototyping, education, and open-source innovation.
+
+---
+
+## Expected Deliverables
+
+- RTL code for Microwatt core with integrated peripherals  
+- Conceptual block diagram illustrating CPU → Peripherals → Demonstration Applications  
+- Plan for demonstrating embedded applications including LED control, sensor readings, and UART communication  
+
+---
+
+
+
+## OpenFrame Overview
+
+The OpenFrame Project provides an empty harness chip that differs significantly from the Caravel and Caravan designs. Unlike Caravel and Caravan, which include integrated SoCs and additional features, OpenFrame offers only the essential padframe, providing users with a clean slate for their custom designs.
 
 ## Installation and Setup
 
